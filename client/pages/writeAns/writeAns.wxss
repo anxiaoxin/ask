@@ -1,0 +1,97 @@
+.user_ans{
+  background-color: #ECECEC;
+}
+.user_ans_head_container{
+  padding: 5px;
+}
+.user_ans_head{
+  display:flex;
+  -webkit-box-align:center;
+  -webkit-align-items:center;
+  align-items:center;
+  border-radius: 2%;
+  border-top: 0 solid white;
+  background-color: white;
+  padding: 2px;
+}
+.user_image{
+  width: 60px;
+  height: 60px;
+  display: block;
+}
+.sexV{
+  position: absolute;
+  right: 5rem;
+}
+.sex{
+  width: 20px;
+  height: 20px;
+}
+.q_content{
+  font-size: 12px;
+  text-indent: 1rem;
+  color: #888888;
+  margin: 0px 0.5rem;
+  overflow: hidden;
+}
+.q_content > text{
+  color: black;
+  padding: 0 5px;
+  float: right;
+}
+.ans_item_body{
+	padding-right: 2.5rem;
+}
+.ans_item_head{
+	font-size: 14px;
+}
+.ans_item_content{
+	font-size: 12px;
+	color: #888888;
+}
+
+.user_ans_content{
+  background-color: white;
+  border-radius: 1%;
+  font-size: 14px;
+  color: #888888;
+  padding: 0 10px;
+  margin: 0 5px;
+}
+.good_image_view{
+	position:absolute;
+	right: 0px;
+	width: 3rem;
+}
+.good_image_view_top > text{
+	font-size: 11px;
+	color: #888888;
+}
+.good_image_view > .time{
+	font-size: 11px;
+	color: #888888;
+	padding-left: 5px;
+}
+.good_image_view_top{
+	display: flex;
+	align-items: center;
+}
+.good{
+	width: 20px;
+	height: 20px;
+}
+.choose_image{
+  box-sizing: border-box;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+.choose_image > image{
+  width:25px;
+  height: 25px;
+}
+
+.submit{
+  padding: 5px;
+}

@@ -1,0 +1,19 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+    <navigator open-type="navigateTo" url="../main/main">
+      <button class="weui-btn" type="primary">跳转到main页面</button>
+    </navigator>
+    <navigator open-type="navigateTo" url="../userAns/ans">
+      <button class="weui-btn" type="primary">跳转到ans页面</button>
+    </navigator>    
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>

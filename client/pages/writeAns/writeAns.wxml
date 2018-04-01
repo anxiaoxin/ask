@@ -1,0 +1,34 @@
+<view class='user_ans'>
+  <view class='user_ans_head_container'>
+    <view class='user_ans_head'>
+          <view class="" style="position: relative;margin-right: 10px;">
+              <image class="user_image" src="../../assets/img/1.jpg"/>
+          </view>
+          <view class="weui-cell__bd ans_item_body">
+              <view class="ans_item_head">用户姓名</view>
+              <view class="ans_item_content"><text>男</text> 中国·天津</view>
+          </view>
+          <view class="sexV" hidden='{{hiddenSex}}'>
+                  <image class="sex" src="{{sexUrl}}" ></image>
+          </view>          
+          <view class="good_image_view">
+              <view class="good_image_view_top">
+                  <image class="good" src="{{likeSvgUrl}}" ></image>
+                  <text>{{likeNum}}</text>
+              </view>
+              <view class="time">history</view>
+          </view>           
+      </view>
+    </view>
+    <view class='q_content'>
+      {{qContent}}<text>背景</text>
+    </view>
+    <view class='user_ans_content'>
+        <view class="ans_scroll" >
+          <textarea placeholder="请输入文本" style='height:{{ans_height}}px;' bindinput='hiddenSex' auto-focus adjust-position show-confirm-bar/>
+        </view>      
+    </view>
+    <view class='submit'>
+      <button>提交</button>
+    </view>
+</view>

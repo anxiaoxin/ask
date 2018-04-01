@@ -1,0 +1,35 @@
+<view class="page">
+  <view class='q'>
+    <view class="" data-title="" bind:tap="showBg">
+        <image class="q_head_image" src="{{qInfo.image}}" mode="widthFix"></image>
+    </view>
+    <view class="q_content">
+    {{qInfo.qContent}}
+    </view>
+    <view class="q_info">
+      <text>已读：{{qInfo.read}}</text>        
+      <text>已赞：{{qInfo.like}}</text> 
+      <text style='color: black;' bindtap='writeAns'>我要回答</text>
+    </view>
+  </view>
+  <view class='ans'>
+    <view class='page__bd'>
+      <view class="weui-cell" wx:for="{{users}}" wx:key="image">
+          <view class="weui-cell__hd" style="position: relative;margin-right: 10px;">
+              <image class="user_image" src="{{item.image}}"/>
+          </view>
+          <view class="weui-cell__bd ans_item_body">
+              <view class="ans_item_head">{{item.name}}</view>
+              <view class="ans_item_content" bindtap='ansContent' data-userId="{{userId}}">{{item.ans_abstract}}</view>
+          </view>
+          <view class="good_image_view">
+              <view class="good_image_view_top">
+                  <image class="good" src="../../assets/img/good.svg"></image>
+                  <text>{{item.like}}</text>
+              </view>
+              <view class="time">{{item.time}}</view>
+          </view>
+      </view>      
+    </view>
+  </view>
+</view>
