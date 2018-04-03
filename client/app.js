@@ -1,9 +1,17 @@
 //app.js
-var urls = require('./url')
-var wxapi = require("./wxapi")
+var wxapi = require("./utils/wxapi")
 
 App({
   onLaunch: function () {
+    wx.getSystemInfo({
+      success: res => {
+        this.globalData.phoneInfo["windowHeight"] = res.windowHeight;
+        //如果该事件发生在login页面加载完后
+        if(this.setHeightCB){
+          this.setHeightCB(res.windowHeight);
+        }
+      }
+    })
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -14,6 +22,7 @@ App({
   },
   globalData: {
     qInfo:'',
-    userInfo:''
+    userInfo:'',
+    phoneInfo: {}
   }
 });
