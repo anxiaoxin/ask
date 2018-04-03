@@ -49,5 +49,5 @@ $config = [
 
     // 微信登录态有效期
     'wxLoginExpires' => 7200,
-    'wxMessageToken' => 'abcdefgh'
+    'wxMessageToken' => 'abcdefg'
 ];
