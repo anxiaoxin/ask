@@ -6,10 +6,11 @@
     <view class="q_content">
     {{qInfo.qContent}}
     </view>
-    <view class="q_info">
-      <text>已读：{{qInfo.read}}</text>        
-      <text>已赞：{{qInfo.like}}</text> 
-      <text style='color: black;' bindtap='writeAns'>我要回答</text>
+    <view class="handler">
+      <text style='color: black;' bindtap='writeAns'>我要回答</text> 
+      <text style='color: black;' bindtap='writeQue'>我要提问</text>
+      <text style='color: black;' bindtap='goToBg'>背景</text>
+      <text style='color: black;' bindtap='aboutUs'>关于</text>       
     </view>
   </view>
   <view class='ans'>

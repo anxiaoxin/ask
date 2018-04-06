@@ -4,7 +4,9 @@
     "pages/logs/logs",
     "pages/main/main",
     "pages/userAns/ans",
-    "pages/writeAns/writeAns"
+    "pages/writeAns/writeAns",
+    "pages/writeQue/que",
+    "pages/aboutUs/about"
   ],
   "window":{
     "backgroundTextStyle":"light",
