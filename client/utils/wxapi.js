@@ -1,19 +1,19 @@
 var config = require('./config')
+var qcloud = require('../vendor/wafer2-client-sdk/index')
+
 var wxapi = {
   login: function(app){
-    var that = this;
-    wx.login({
-      success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-        wx.request({
-          url: config.service.loginUrl,
-          data: res.code,
-          success: res => {
-            console.log(res);
-          }
-        })
+
+    qcloud.setLoginUrl(config.service.loginUrl);
+    qcloud.login({
+      success: function (userInfo) {
+        console.log('登录成功', userInfo);
+      },
+      fail: function (err) {
+        console.log('登录失败', err);
       }
-    })
+    });
+    var that = this;
     //用户是否已授权访问用户信息
     wx.getSetting({
       success: res => {
