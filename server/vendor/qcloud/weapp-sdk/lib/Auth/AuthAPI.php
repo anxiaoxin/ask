@@ -17,31 +17,17 @@ class AuthAPI {
      * @param {string} $iv          解密用户信息的向量
      * @return {array} { loginState, userinfo }
      */
-    public static function login($code, $encryptData, $iv) {
+    public static function login($code) {
         // 1. 获取 session key
         $sessionKey = self::getSessionKey($code);
-
+        list($session_key, $openid) = array_values(self::
+            getSessionKey($appId, $appSecret, $code));
         // 2. 生成 3rd key (skey)
         $skey = sha1($sessionKey . mt_rand());
         
-        /**
-         * 3. 解密数据
-         * 由于官方的解密方法不兼容 PHP 7.1+ 的版本
-         * 这里弃用微信官方的解密方法
-         * 采用推荐的 openssl_decrypt 方法（支持 >= 5.3.0 的 PHP）
-         * @see http://php.net/manual/zh/function.openssl-decrypt.php
-         */
-        $decryptData = \openssl_decrypt(
-            base64_decode($encryptData),
-            'AES-128-CBC',
-            base64_decode($sessionKey),
-            OPENSSL_RAW_DATA,
-            base64_decode($iv)
-        );
-        $userinfo = json_decode($decryptData);
 
         // 4. 储存到数据库中
-        User::storeUserInfo($userinfo, $skey, $sessionKey);
+        User::storeUserInfo($skey, $sessionKey, $openid);
 
         return [
             'loginState' => Constants::S_AUTH,
@@ -89,13 +75,11 @@ class AuthAPI {
         if ($useQcProxy) {
             $secretId = Conf::getQcloudSecretId();
             $secretKey = Conf::getQcloudSecretKey();
-            list($session_key, $openid) = array_values(self::useQcloudProxyGetSessionKey($secretId, $secretKey, $code));
-            return $session_key;
+            return self::useQcloudProxyGetSessionKey($secretId, $secretKey, $code);
         } else {
             $appId = Conf::getAppId();
             $appSecret = Conf::getAppSecret();
-            list($session_key, $openid) = array_values(self::getSessionKeyDirectly($appId, $appSecret, $code));
-            return $session_key;
+            return self::getSessionKeyDirectly($appid, $appSecret, $code);
         }
     }
 

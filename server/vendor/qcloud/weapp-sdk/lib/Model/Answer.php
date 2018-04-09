@@ -5,9 +5,9 @@ use QCloud_WeApp_SDK\Mysql\Mysql as DB;
 use QCloud_WeApp_SDK\Constants;
 use \Exception;
 
-class User
+class Answer
 {
-    public static function storeUserInfo ($skey, $session_key, $openid) {
+    public static function storeAnswer ($userinfo, $skey, $session_key) {
         $uuid = bin2hex(openssl_random_pseudo_bytes(16));
         $create_time = date('Y-m-d H:i:s');
         $last_visit_time = $create_time;
