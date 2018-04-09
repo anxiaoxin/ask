@@ -1,0 +1,32 @@
+<view>
+  <view class='aboutUsHead'>
+      <text class='appName'>
+        ONE ASK 
+      </text>
+      <text class='appNameTitle'>listen, do you love life</text>
+  </view>
+  <view class='appIntroduction'>
+    <view class='appIntroductionContent'>
+    问与答，人类交流的基本形式。信息也在这一问一答中传播开来。One Ask希望通过高水平的问题以及答案，为用户提供高质量的信息。
+    </view>
+  </view>
+  <view class='authInfo'>
+    <view class='authInfoItem'>
+      <text>作者：我是瘦肉精</text>
+    </view>
+    <view class='authInfoItem'>
+      <text>联系方式：15620560515</text>     
+    </view>
+  </view>
+  <view class='reward'>
+    <button class='rewardButton' bindtap='pay'>赞赏</button>
+    <view class='rewardText'>
+      <text>有您的支持我们会越来越好</text>
+    </view>
+  </view>
+  <view class='rewardUsers'>
+    <view wx:for="{{usersImageUrl}}" class='rewardUser'>
+      <image src="{{item}}" mode='widthFix'></image>    
+    </view>
+  </view>
+</view>

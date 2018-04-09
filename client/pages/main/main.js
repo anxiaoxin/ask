@@ -76,18 +76,40 @@ Page({
 	onShow: function(){
 		console.log("页面显示")
 	},
-  showBg: function(){
-
-  },
   writeAns: function(){
     wx.navigateTo({
       url: '../writeAns/writeAns',
     })    
   },
-  ansContent: function(e){
-    console.log(e.target.dataset.userId);
+  ansContent: e => {
     wx.navigateTo({
       url: '../userAns/ans',
     })
+  },
+  writeQue: e => {
+    wx.navigateTo({
+      url: '../writeQue/que'
+    })
+  },
+  aboutUs: e => {
+    wx.navigateTo({
+      url: '../aboutUs/about',
+    })
+  },
+  onShareAppMessage: res => {
+    if (res.from === 'button') {
+      // 来自页面内转发按钮
+      console.log(res.target)
+    }
+    return {
+      title: '自定义转发标题',
+      path: '/pages/main/main',
+      success: res => {
+        // 转发成功
+      },
+      fail: res => {
+        // 转发失败
+      }
+    }
   }
 })

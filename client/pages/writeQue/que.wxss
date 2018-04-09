@@ -19,6 +19,14 @@
   height: 60px;
   display: block;
 }
+.sexV{
+  position: absolute;
+  right: 5rem;
+}
+.sex{
+  width: 20px;
+  height: 20px;
+}
 .ans_item_body{
 	padding-right: 2.5rem;
 }
@@ -30,13 +38,16 @@
 	color: #888888;
 }
 
-.user_ans_content{
+.user_ans_content, .que_bg_content{
   background-color: white;
   border-radius: 1%;
-  font-size: 16px;
+  font-size: 14px;
   color: #888888;
   padding: 0 10px;
   margin: 0 5px;
+}
+.que_bg_content{
+  margin: 5px 5px 0 5px;
 }
 .good_image_view{
 	position:absolute;
@@ -59,4 +70,19 @@
 .good{
 	width: 20px;
 	height: 20px;
+}
+.choose_image{
+  box-sizing: border-box;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+.choose_image > image{
+  width:25px;
+  height: 25px;
+}
+
+.submit{
+  padding: 5px;
 }
