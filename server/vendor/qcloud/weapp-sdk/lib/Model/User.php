@@ -7,12 +7,11 @@ use \Exception;
 
 class User
 {
-    public static function storeUserInfo ($skey, $session_key, $openid) {
+    public static function storeUserInfo ($skey, $session_key, $open_id) {
         $uuid = bin2hex(openssl_random_pseudo_bytes(16));
         $create_time = date('Y-m-d H:i:s');
         $last_visit_time = $create_time;
-        $open_id = $userinfo->openId;
-        $user_info = json_encode($userinfo);
+        $user_info = "{}";
 
         $res = DB::row('cSessionInfo', ['*'], compact('open_id'));
         if ($res === NULL) {
