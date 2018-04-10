@@ -13,10 +13,11 @@ return [
     '__pattern__' => [
         'name' => '\w+',
     ],
-    'hello' => 'index/Hello/index',
+    'login' => 'index/User/login',
     '[index]' => [
     	'hello' => 'index/Hello/index',
     	'index' => 'index/Index/index',
+
     ] 
 
 ];
