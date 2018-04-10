@@ -1,16 +1,32 @@
 <view class="page">
   <view class='q' animation="{{headAnimation}}">
-    <view class="q_head" data-title="" bind:tap="showBg">
-        <image class="q_head_image" src="{{qInfo.image}}" style="height:{{headImageHeight}}px"></image>
+    <view class="q_head" data-title="" bind:tap="showBg" style='height:{{mainHeadHeight}}px;'>
+        <view class='q_head_text_content'>
+          <view class='q_head_text'>男子活着，</view>
+          <view class='q_head_text'>只为忠烈一生，</view>
+          <view class='q_head_text'>这是国命？</view>  
+        </view>
     </view>
     <view class="q_content">
     {{qInfo.qContent}}
     </view>
     <view class="handler">
-      <text style='color: black;' bindtap='writeAns'>我要回答</text> 
-      <text style='color: black;' bindtap='writeQue'>我要提问</text>
-      <text style='color: black;' bindtap='goToBg'>背景</text>
-      <text style='color: black;' bindtap='aboutUs'>关于</text>       
+      <view class='handlerItem' bindtap='writeAns'>
+        <image class='handlerSVG' src='../../assets/img/ans.svg'></image>
+        <text>回答</text> 
+      </view>
+      <view class='handlerItem' bindtap='writeQue'>
+        <image class='handlerSVG' src='../../assets/img/ask.svg'></image>
+        <text>提问</text>
+      </view>
+      <view class='handlerItem' bindtap='goToBg'>
+        <image class='handlerSVG' src='../../assets/img/bg.svg'></image>
+        <text>背景</text>
+      </view>
+      <view class='handlerItem' bindtap='aboutUs'>
+        <image class='handlerSVG' src='../../assets/img/aboutUs.svg'></image>
+        <text>关于</text>
+      </view>
     </view>
   </view>
   <view class='ans'>

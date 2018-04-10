@@ -9,6 +9,27 @@
   top: -100px;
   opacity: 0;
 }
+.q_head{
+  background-color: black;
+  display: flex;
+  align-content: center;
+}
+.q_head_text_content{
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: base-line;
+  flex-direction: row-reverse;
+  font-family: 楷体;
+  font-weight: bolder;
+  font-size: 0.8rem;
+  
+}
+.q_head_text{
+  width: 1rem;
+  color: white;
+}
 .q_head_image{
   width: 100%;
 }
@@ -16,14 +37,19 @@
   font-size: 0.8rem;
   text-indent: 1rem;
   color: #888888;
-  margin: 0px 0.5rem;
+  margin: 0.5rem;
 }
 .handler{
-  font-size: 0.8rem;
-  color: #888888;
   display: flex;
   justify-content: space-around;
   padding: 0.2rem 0;
+  font-size: 0.7rem;
+  color: black;
+}
+.handlerSVG{
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 .ans{
 	background-color: #ECECEC;

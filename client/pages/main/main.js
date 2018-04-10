@@ -64,14 +64,13 @@ Page({
     ],
     headAnimation: {},
     bdItemAnimation: {},
-    headImageHeight: 0,
+    mainHeadHeight: 0,
   },
 	onLoad: function () {
 		console.log("页面加载完成");
-    console.log(app.globalData.phoneInfo);
     this.setData({
       qInfo: app.globalData.qInfo,
-      headImageHeight: app.globalData.phoneInfo.windowWidth / 2
+      mainHeadHeight: app.globalData.phoneInfo.windowWidth / 2.5
     })
     this.showAnimation();    
 	},
