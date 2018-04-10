@@ -7,10 +7,11 @@
   display: block;
 }
 .appName{
-  font-size: 24px;
+  font-size: 2rem;
+  font-weight: bolder;
 }
 .appNameTitle{
-  font-size: 11px;
+  font-size: 0.6rem;
 }
 .appIntroduction{
   background-color: rgb(102,102,102);  
@@ -33,31 +34,37 @@
 }
 .authInfo {
   box-sizing: border-box;
-  font-size: 14px;
+  font-size: 0.8rem;
   width: 70%;
   margin: 0 auto;
   padding: 1rem 0.5rem;
 }
 .reward {
   text-align: center;
-  margin: 5px 0;  
+  margin: 5px 0; 
+  position: relative; 
 }
 .rewardText {
-  font-size: 12px;
+  font-size: 0.6rem;
   color: #888888;
 }
 .rewardButton {
   width: 20%;
-  font-size: 14px;
+  font-size: 0.8rem;
   background-color: red;
   color: white;
+  position: relative;
 }
 .rewardUsers {
+  position: relative;
+}
+.rewardUserscontent {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   width: 95%;
   margin: 0 auto;
+  position: relative;
 }
 .rewardUser{
   width: 15%;
@@ -66,3 +73,4 @@
 .rewardUser > image{
   width: 100%;
 }
+ 

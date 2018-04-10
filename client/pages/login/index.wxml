@@ -1,5 +1,5 @@
 <view class='loginPage'>
-  <view class='askFont' style='height:{{askHeight}}px;'>
+  <view class='askFont'>
     <text>ASK</text>
   </view>
 </view>

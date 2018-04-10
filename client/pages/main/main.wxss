@@ -1,34 +1,43 @@
 .page{
   background-color: #ECECEC;
+  position: relative;
 }
 .q{
   background-color: white;
 	border-radius: 2%;
-  padding: 0 0 0.5rem 0;
+  position: relative;
+  top: -100px;
+  opacity: 0;
 }
 .q_head_image{
   width: 100%;
 }
 .q_content{
-  font-size: 14px;
+  font-size: 0.8rem;
   text-indent: 1rem;
   color: #888888;
   margin: 0px 0.5rem;
 }
 .handler{
-  font-size: 13px;
+  font-size: 0.8rem;
   color: #888888;
   display: flex;
   justify-content: space-around;
-  margin-top: 0.2rem;
+  padding: 0.2rem 0;
 }
 .ans{
 	background-color: #ECECEC;
 }
-.page__bd{
+.page_bd{
 	background-color: white;
-	margin: 0.2rem;
+	margin: 0.3rem;
 	border-radius: 2%;
+  position: relative;
+}
+.page_bd_item{
+  position: relative;
+  top: 100px;
+  opacity: 0;
 }
 .ans_item{
 	padding: 2px 0;
@@ -38,13 +47,15 @@
 	padding-right: 2.5rem;
 }
 .ans_item_head{
-	font-size: 14px;
+	font-size: 0.8rem;
 }
 .ans_item_content{
-	font-size: 14px;
+	font-size: 0.7rem;
 	color: #888888;
   text-indent: 1rem;
   text-align: justify;
+  height: 3.2rem;
+  overflow: hidden;
 }
 .user_image{
 	border-radius: 50%;

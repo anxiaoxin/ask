@@ -1,7 +1,7 @@
 <view class="page">
-  <view class='q'>
-    <view class="" data-title="" bind:tap="showBg">
-        <image class="q_head_image" src="{{qInfo.image}}" mode="widthFix"></image>
+  <view class='q' animation="{{headAnimation}}">
+    <view class="q_head" data-title="" bind:tap="showBg">
+        <image class="q_head_image" src="{{qInfo.image}}" style="height:{{headImageHeight}}px"></image>
     </view>
     <view class="q_content">
     {{qInfo.qContent}}
@@ -14,8 +14,8 @@
     </view>
   </view>
   <view class='ans'>
-    <view class='page__bd'>
-      <view class="weui-cell" wx:for="{{users}}" wx:key="image">
+    <view class='page_bd'>
+      <view class="weui-cell page_bd_item" wx:for="{{users}}" wx:key="image" animation="{{bdItemAnimation}}">
           <view class="weui-cell__hd" style="position: relative;margin-right: 10px;">
               <image class="user_image" src="{{item.image}}"/>
           </view>

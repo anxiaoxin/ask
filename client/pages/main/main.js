@@ -61,22 +61,45 @@ Page({
         time: "11:32",
         ans_abstract: "这是一个回答的具体内容，内容是..."
       },                                    
-    ]
+    ],
+    headAnimation: {},
+    bdItemAnimation: {},
+    headImageHeight: 0,
   },
-	onLoad: function(){
+	onLoad: function () {
 		console.log("页面加载完成");
+    console.log(app.globalData.phoneInfo);
     this.setData({
-      qInfo: app.globalData.qInfo
+      qInfo: app.globalData.qInfo,
+      headImageHeight: app.globalData.phoneInfo.windowWidth / 2
     })
-    console.log(app.globalData)
+    this.showAnimation();    
 	},
-	onReady: function(){
+	onReady: function () {
 		console.log("页面初次渲染完成");
 	},
-	onShow: function(){
+	onShow: function () {
 		console.log("页面显示")
 	},
-  writeAns: function(){
+  showAnimation: function () {
+    var headAnimation = wx.createAnimation({
+      duration: 500,
+      timingFunction: "ease-out",
+      delay: 0,
+    });
+    var bdItemAnimation = wx.createAnimation({
+      duration: 500,
+      timingFunction: "ease-out",
+      delay: 0
+    })
+    headAnimation.opacity(1).translateY(100).step();
+    bdItemAnimation.opacity(1).translateY(-100).step();
+    this.setData({
+      headAnimation: headAnimation.export(),
+      bdItemAnimation: bdItemAnimation.export(),
+    })
+  },
+  writeAns: function () {
     wx.navigateTo({
       url: '../writeAns/writeAns',
     })    
@@ -96,10 +119,15 @@ Page({
       url: '../aboutUs/about',
     })
   },
+  goToBg: e => {
+    wx.navigateTo({
+      url: '../background/index',
+    })
+  },
   onShareAppMessage: res => {
     if (res.from === 'button') {
       // 来自页面内转发按钮
-      console.log(res.target)
+      
     }
     return {
       title: '自定义转发标题',

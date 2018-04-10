@@ -26,8 +26,9 @@ Page({
       '../../assets/img/1.jpg',
       '../../assets/img/1.jpg',
       '../../assets/img/1.jpg',
-      
-    ]
+    ],
+    buttonAnimation: {},
+    usersAnimation: {}
   },
 
   /**

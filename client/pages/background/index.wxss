@@ -1,0 +1,31 @@
+.bgPage{
+  background-color: #ECECEC;
+  position: relative;
+}
+.bgHead{
+	width: 95%;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.bgHead > image {
+	width: 100%;
+	border-radius: 2%;
+}
+.que_scroll{
+	margin-top:5px;
+	border-bottom: 5px solid transparent; 
+}
+.bgQue{
+	background-color: white;
+	font-size: 16px;
+	width: 95%;
+	margin: 0 auto;
+	border-radius: 2%;
+	box-sizing: border-box;
+	text-align: justify;
+	padding: 0.5rem;
+}
+.bgContent{
+	border-radius: 0.5%;
+	margin-top: 0.5rem;
+}
