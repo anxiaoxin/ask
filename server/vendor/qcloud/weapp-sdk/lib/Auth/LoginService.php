@@ -10,10 +10,10 @@ class LoginService {
     public static function login() {
         try {
             $code = self::getHttpHeader(Constants::WX_HEADER_CODE);
-            $encryptedData = self::getHttpHeader(Constants::WX_HEADER_ENCRYPTED_DATA);
-            $iv = self::getHttpHeader(Constants::WX_HEADER_IV);
+            // $encryptedData = self::getHttpHeader(Constants::WX_HEADER_ENCRYPTED_DATA);
+            // $iv = self::getHttpHeader(Constants::WX_HEADER_IV);
 
-            return AuthAPI::login($code, $encryptedData, $iv);
+            return AuthAPI::login($code);
         } catch (Exception $e) {
             return [
                 'loginState' => Constants::E_AUTH,

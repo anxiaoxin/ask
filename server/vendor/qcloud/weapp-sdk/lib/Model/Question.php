@@ -5,13 +5,14 @@ use QCloud_WeApp_SDK\Mysql\Mysql as DB;
 use QCloud_WeApp_SDK\Constants;
 use \Exception;
 
-class User
+class Question
 {
-    public static function storeUserInfo ($skey, $session_key, $open_id) {
+    public static function storeQuestion ($question) {
         $uuid = bin2hex(openssl_random_pseudo_bytes(16));
         $create_time = date('Y-m-d H:i:s');
         $last_visit_time = $create_time;
-        $user_info = "{}";
+        $open_id = $userinfo->openId;
+        $user_info = json_encode($userinfo);
 
         $res = DB::row('cSessionInfo', ['*'], compact('open_id'));
         if ($res === NULL) {
