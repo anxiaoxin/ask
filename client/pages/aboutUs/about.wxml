@@ -12,21 +12,23 @@
   </view>
   <view class='authInfo'>
     <view class='authInfoItem'>
-      <text>作者：我是瘦肉精</text>
+      <text>作者：我是瘦肉菁</text>
     </view>
     <view class='authInfoItem'>
-      <text>联系方式：15620560515</text>     
+      <text>合作：l980828298</text>     
     </view>
   </view>
   <view class='reward'>
-    <button class='rewardButton' bindtap='pay'>赞赏</button>
+    <button class='rewardButton' bindtap='pay' animation="{{buttonAnimation}}">赞赏</button>
     <view class='rewardText'>
       <text>有您的支持我们会越来越好</text>
     </view>
   </view>
-  <view class='rewardUsers'>
-    <view wx:for="{{usersImageUrl}}" class='rewardUser'>
-      <image src="{{item}}" mode='widthFix'></image>    
+  <view class="rewardUsers">
+    <view class='rewardUserscontent' animation="{{usersAnimation}}">
+      <view wx:for="{{usersImageUrl}}" class='rewardUser'>
+        <image src="{{item}}" mode='widthFix'></image>    
+      </view>
     </view>
   </view>
 </view>

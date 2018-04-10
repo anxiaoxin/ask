@@ -5,11 +5,8 @@ App({
   onLaunch: function () {
     wx.getSystemInfo({
       success: res => {
-        this.globalData.phoneInfo["windowHeight"] = res.windowHeight;
+        this.globalData.phoneInfo = res;
         //如果该事件发生在login页面加载完后
-        if(this.setHeightCB){
-          this.setHeightCB(res.windowHeight);
-        }
       }
     })
     // 展示本地存储能力

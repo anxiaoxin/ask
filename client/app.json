@@ -6,7 +6,8 @@
     "pages/userAns/ans",
     "pages/writeAns/writeAns",
     "pages/writeQue/que",
-    "pages/aboutUs/about"
+    "pages/aboutUs/about",
+    "pages/background/index"
   ],
   "window":{
     "backgroundTextStyle":"light",

@@ -3,6 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 7rem;
 }
 .askFont > text{
   font-size: 5rem;
