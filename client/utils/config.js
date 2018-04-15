@@ -1,9 +1,9 @@
-var host = "https://8wot8ppf.qcloud.la";
+var host = "http://localhost/index.php";
 
 var config = {
   service: {
     host,
-    loginUrl: `${host}/weapp/login`
+    loginUrl: `${host}/login`
   }
 }
 
